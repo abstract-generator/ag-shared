@@ -16,5 +16,14 @@ function HomeController($scope, $http, $location) {
 }
 
 function Page2Controller($scope, $http, $location) {
+    $scope.refresh = function() {
+        $http({method: 'GET', url: '/api/info'}).
+          success(function(data, status) {
+            $scope.some_data = data;
+          }).
+          error(function(data, status) {
+        });
+    }
 
+    $scope.refresh();
 }
