@@ -1,0 +1,9 @@
+<div>
+    <div class="label label-warning" ng-show="loading" style="position:fixed; left:48%;">Загрузка...</div>
+    <label>Тема реферата</label>
+    <input type="text" ng-model="name" placeholder="Тема реферата" /><br />
+    <select ng-model="lang" ng-options="l.id as l.name for l in languages" /> <br />
+    <button ng-click="load()">GET</button>
+
+    {{data}}
+</div>

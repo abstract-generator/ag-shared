@@ -6,5 +6,5 @@ setup(name='AbstractGenerator',
       author='AbstractGenerator Team',
       author_email='abstract_generator@googlegroups.com',
       url='https://github.com/abstract-generator',
-      install_requires=['Flask>=0.9'],
+      install_requires=['Flask>=0.9', 'wikipydia>=0.1.4', 'simplejson'],
      )
