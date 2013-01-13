@@ -5,4 +5,4 @@
 # could be python, php, ruby, etc.
 
 source ~/python-2.6/virtenv/bin/activate
-pip install --log $OPENSHIFT_DATA_DIR/inst.log  ~/libs/wikipydia
+pip install ~/libs/wikipydia
