@@ -1,0 +1,3 @@
+[submodule "libs/wikipydia"]
+	path = libs/wikipydia
+	url = https://github.com/j2labs/wikipydia.git

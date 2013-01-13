@@ -21,7 +21,8 @@ def api_info():
 @app.route('/api/wiki')
 def api_wiki():
     w = WikiPage(request.args['name'], request.args['lang'])
-    js = json.dumps([w.text])
+    js = json.dumps({'text': w.text,
+                     'seealso': w.get_see_also()})
     return Response(js, status=200, mimetype='application/json')
 
 
