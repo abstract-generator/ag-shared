@@ -22,7 +22,8 @@ def api_info():
 def api_wiki():
     w = WikiPage(request.args['name'], request.args['lang'])
     js = json.dumps({'text': w.text,
-                     'seealso': w.get_see_also()})
+                     'seealso': w.get_see_also(),
+                     'html': w.gen_html()})
     return Response(js, status=200, mimetype='application/json')
 
 

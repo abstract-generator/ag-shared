@@ -5,5 +5,5 @@
     <select ng-model="lang" ng-options="l.id as l.name for l in languages" /> <br />
     <button ng-click="load()">GET</button>
 
-    {{data}}
+    <div ng-bind-html-unsafe="data.html"></div>
 </div>

@@ -2,6 +2,9 @@
 
 import wikipydia
 
+import mediawiki
+# import re
+
 LANG = 'ru'
 SEE_ALSO = {'ru': u"См. также",
             'en': u"See also"}
@@ -29,3 +32,16 @@ class WikiPage(object):
             return wikipydia.get_links( sections['contents'][section] ).values()
         except ValueError:
             return []
+
+    def gen_html(self):
+        return mediawiki.wiki2html(self.text, True)
+        # result = []
+        # headers = wikipydia.get_sections(self.text)['headers']
+        # contents = wikipydia.get_sections(self.text)['contents']
+        # for section in zip(headers, contents):
+        #     power = (len(re.findall("=*", section[0])[0])+1)
+        #     head_name = ' '.join(section[0].split(' ')[1:])
+        #     head = "<h%d>%s</h%d>" % (power, head_name, power)
+        #     result.append(head)
+        #     result.append(section[1])
+        # return ''.join(result)
